@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/45bfacb3a0.js" crossorigin="anonymous"></script>
+    <title>Form Preview</title>
+</head>
+
+<body>
+    <h2 class="preview-text">Investment Form</h2>
+    <div class="btn">
+        <button type="submit" id="edit-button" class="edit">Edit</button>
+        <button id="delete" class="delete">Delete</button>
+    </div>
+    <div class="profile-pic">
+        <label for="pro-pic"><i class="fa-solid fa-file-image"
+                style="font-size: 24px;border: 1px solid black;padding: 25px;cursor: pointer;text-align: center;"></i></label>
+        <input type="file" id="pro-pic" name="profile-pic" accept=".png, .jpg, .gif" required>
+        <div id="display-image">
+            <p>Profile Picture</p>
+        </div>
+    </div>
+    <div class=" container">
+        <div class="row">
+            <div class="column">
+                <h2>Business Interests</h2>
+                <div class="business">
+                    <form action="#" id="edit">
+                        <p>Activities:
+                            <input type="checkbox" name="" id="" required> Buys
+                            <input type="checkbox" name="" id="" required checked> Invest
+                            <input type="checkbox" name="" id="" required> Partner
+                            <input type="checkbox" name="" id="" required> Lease
+                        </p><br>
+
+                        <p>Industries:
+                            <select id="industries" name="industries" required>
+                                <option value="agriculture">Agriculture</option>
+                                <option value="construction">Construction</option>
+                                <option value="education">Education</option>
+                                <option value="finance">Finance</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="manufacturing">Manufacturing</option>
+                                <option value="retail">Retail</option>
+                                <option value="technology">Technology</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </p><br>
+
+                        <label for="location">Location:</label> <br>
+                        <select id="location" name="location[]" multiple required>
+                            <option value="new-york">New York</option>
+                            <option value="los-angeles">Los Angeles</option>
+                            <option value="chicago">Chicago</option>
+                            <option value="miami">Miami</option>
+                        </select><br>
+                    </form>
+                </div>
+                <h2>Financial</h2>
+                <div class="finance">
+                    <form action="#" id="edit">
+                        <label>Funding source: </label>
+                        <input type="radio" id="own" name="funding-source" value="Own" required>
+                        <label for="own">Own</label>
+                        <input type="radio" id="family-friends" name="funding-source" value="Family & Friends" required>
+                        <label for="family-friends">Family & Friends</label>
+                        <input type="radio" id="bank-loan" name="funding-source" value="Bank Loan" checked required>
+                        <label for="bank-loan">Bank Loan</label>
+                        <input type="radio" id="external-investors" name="funding-source" value="External Investors"
+                            required>
+                        <label for="external-investors">External Investors</label><br>
+                    </form>
+                </div>
+            </div>
+            <div class="column">
+                <h2>Personal</h2>
+                <div class="personal">
+                    <form action="#" id="edit">
+                        <label for="mobile">Mobile:</label>
+                        <input type="tel" id="mobile" name="mobile" value="+91-0123412340" maxlength="13" required>
+                        <br> <br>
+                        <label for="zip-code">Zip code:</label>
+                        <input type="text" id="zip-code" name="zip-code" value="800001" pattern="[0-9]{6}" required </form>
+                </div>
+                <h2>Professional</h2>
+                <div class="pro">
+                    <label for="company">Company:</label>
+                    <input type="text" value="TechnoWare pvt">
+                </div>
+            </div>
+        </div>
+        <button class="done">Submit</button>
+    </div>
+</body>
+</html>
